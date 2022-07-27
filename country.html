@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data-viz</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="../util.js"></script>
+  <script src="../plot.js"></script>
+  <script src="../response.js"></script>
+</head>
+
+<body>
+  <h1>Country</h1>
+  <div style="display:block">
+    <label for="countries">Choose a Country:</label>
+    <select name="countries" id="countrySelect" onchange="handleCountry(event)" style="margin-bottom: 5px;">
+      <option selected="true" value="" disabled="true">Select a country</option>
+    </select>
+    <br />
+
+    <label for="responses">Choose a Response:</label>
+    <select name="responses" id="responseSelect" onchange="handleResponse(event)">
+      <option selected="true" value="">None</option>
+    </select>
+  </div>
+
+  <svg height="1000" width="1500" class="chart" style="float:left"></svg>
+  <svg id="legend" height="200" width="300" style="float: left"></svg>
+  <br />
+  <div style="width: 1500px;">
+    <div style="margin-left: 300px;">
+      <h5>Scale Graph</h5>
+      <label for="start">Start date:</label>
+      <input type="date" id="start" name="start" value="2020-01-22" min="2020-01-22" max="2021-04-30">
+
+      <label for="end">End date:</label>
+      <input type="date" id="end" name="end" value="2021-05-01" min="2020-01-22" max="2021-05-01">
+
+      <br />
+      <label for="min">Minimum Cases:</label>
+      <input type="number" id="min" name="min" min="0" style="width: 60;" value="0">
+      <label for="max">Maximum Cases:</label>
+      <input type="number" id="max" name="max" min="1" style="width: 60;" value="20000">
+      <button onclick="updateRange()">Update</button>
+      <button onclick="reset()">Reset</button>
+      <br />
+      <a href="/region/region.html"><button>Prev</button></a>
+    </div>
+
+  </div>
+</body>
+<script src="country.js"></script>
+
+</html>

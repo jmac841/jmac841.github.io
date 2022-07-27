@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data-viz</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="./util.js"></script>
+    <script src="./plot.js"></script>
+  </head>
+  <body>
+    <p>Dataset: https://www.kaggle.com/datasets/pranjalverma08/coronavirus-covid19-indepth-dataset?select=owid-covid-data+%281%29.csv</p>
+    <svg height="1000" width="1500" id="cases" style="display:block"></svg>
+    <svg height="1000" width="1500" id="deaths" style="display:block"></svg>
+    <div style="width: 1500px;; text-align: center;">
+      <a href="/region/region.html" style="display: inline-block"><button>Next</button></a>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

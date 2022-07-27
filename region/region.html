@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Data-viz</title>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="../util.js"></script>
+  <script src="../plot.js"></script>
+</head>
+
+<body>
+  <svg height="1000" width="1500" id="cases"></svg>
+  <svg id="legend" height="200" width="300" style="float: right"></svg>
+  <svg height="1000" width="1500" id="deaths"></svg>
+  <div style="width: 1500px;; text-align: center;">
+    <a href="/index.html" style="display: inline-block"><button>Prev</button></a>
+    <a href="/country/country.html?measure=aveDailyNewCases" style="display: inline-block"><button>Explore Country's Cases</button></a>
+    <a href="/country/country.html?measure=dailyDeaths" style="display: inline-block"><button>Explore Country's Deaths</button></a>
+  </div>
+</body>
+<script src="region.js"></script>
+
+</html>
+
+<svg height="1000" width="1500" class="chart" style="float:left"></svg>
+    <svg id="legend" height="200" width="300" style="float: left"></svg>
