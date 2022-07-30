@@ -28,6 +28,7 @@ d3.json("../finalData/fullData.json").then(data => {
           }
 
           return {
+            location: locationName,
             date: d3.timeParse("%Y-%m-%d")(element.date),
             dailyNewCases: parseInt(element.dailyNewCases),
             dailyDeaths: parseInt(element.dailyDeaths)
@@ -55,7 +56,11 @@ d3.json("../finalData/fullData.json").then(data => {
       earliestIdx,
       furtherestIdx
     },
-    continentColors
+    continentColors,
+    {
+      showToolTip: true,
+      valueLabel: 'Total daily new cases'
+    }
   )
   plotGraph(
     '#deaths',
@@ -73,6 +78,10 @@ d3.json("../finalData/fullData.json").then(data => {
       earliestIdx,
       furtherestIdx
     },
-    continentColors
+    continentColors,
+    {
+      showToolTip: true,
+      valueLabel: 'Total daily deaths'
+    }
   )
 })

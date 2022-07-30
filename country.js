@@ -11,8 +11,6 @@ let minY = 0
 
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
-console.log(params)
-
 
 const responseSelect = document.getElementById('responseSelect')
 Object.keys(responseToData).forEach(key => {

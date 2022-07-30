@@ -1,9 +1,7 @@
 d3.json("./finalData/fullData.json").then(data => {
   const input = data.World
-  console.log(input)
   let maxNewCases = 0
   let maxNewDeaths = 0
-  console.log(input[0])
   input.forEach((day, i) => {
     input[i].date = parseTime(day.date)
     if (parseInt(day.dailyNewCases) > maxNewCases) {
